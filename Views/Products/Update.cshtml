@@ -1,0 +1,37 @@
+﻿@model WithoutDependencyCrud.Models.Product
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+<div class="row">
+    <div class="col-4 offset-4">
+        <div class="card">
+            <div class="card-title"><h4>Update Product</h4></div>
+            <div class="card-body">
+                <form method="post" asp-action="Update" asp-controller="Products">
+                    <div class="form-group">
+                        <input class="form-control" asp-for="Id" type="hidden" />
+                        <label asp-for="Title"></label>
+                        <input class="form-control" asp-for="Title" />
+
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Price"></label>
+                        <input class="form-control" asp-for="Price" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Quantity"></label>
+                        <input class="form-control" asp-for="Quantity" />
+                    </div>
+                    <div class="form-group">
+
+                        <input type="submit" class="btn btn-success btn-block" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
